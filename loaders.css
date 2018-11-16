@@ -45,28 +45,32 @@
 .heart-beat::before,
 .heart-beat::after {
     content: '';
-    height: 5em;
+    height: 6em;
     width: 5em;
     border-radius: 50%;
     position: absolute;
     background-color: currentColor;
+    top: -8.6em;
 }
 
 .heart-beat::before {
-    transform: translate(2.5em);
+    left: -4.58em;
+    transform: rotateZ(-45deg);
 }
 
 .heart-beat::after {
-    transform: translate(0, -2.5em);
+    left: -0.42em;
+    transform: rotateZ(45deg);
 }
 
 .heart-beat {
-    height: 5em;
-    width: 5em;
-    background-color: currentColor;
-    transform: rotateZ(45deg);
     animation: heartbeat 1s linear;
     animation-iteration-count: infinite;
+    border-left: 4em solid transparent;
+    border-right: 4em solid transparent;
+    border-top: 4em solid currentColor;
+    width: 0;
+    height: 0;
     position: relative;
-    top: 2.5em;
+    top: 5em;
 }
