@@ -30,18 +30,40 @@
     }
 }
 
-@keyframes textloader{
-    0%{content: '';}
-    10%{content: 'L';}
-    20%{content: 'LO';}
-    30%{content: 'LOA';}
-    40%{content: 'LOAD';}
-    50%{content: 'LOADI';}
-    60%{content: 'LOADIN';}
-    70%{content: 'LOADING';}
-    80%{content: 'LOADING.';}
-    90%{content: 'LOADING..';}
-    100%{content: 'LOADING...';}
+@keyframes textloader {
+    0% {
+        content: '';
+    }
+    10% {
+        content: 'L';
+    }
+    20% {
+        content: 'LO';
+    }
+    30% {
+        content: 'LOA';
+    }
+    40% {
+        content: 'LOAD';
+    }
+    50% {
+        content: 'LOADI';
+    }
+    60% {
+        content: 'LOADIN';
+    }
+    70% {
+        content: 'LOADING';
+    }
+    80% {
+        content: 'LOADING.';
+    }
+    90% {
+        content: 'LOADING..';
+    }
+    100% {
+        content: 'LOADING...';
+    }
 }
 
 /******Loaders*******/
@@ -89,9 +111,13 @@
     top: 4em;
 }
 
-.text-loader::before{
+.text-loader::before {
     content: '';
     font-family: sans-serif;
     animation: textloader 1s linear;
     animation-iteration-count: infinite;
+}
+
+.text-loader {
+    width: 10em;
 }
