@@ -30,6 +30,20 @@
     }
 }
 
+@keyframes textloader{
+    0%{content: '';}
+    10%{content: 'L';}
+    20%{content: 'LO';}
+    30%{content: 'LOA';}
+    40%{content: 'LOAD';}
+    50%{content: 'LOADI';}
+    60%{content: 'LOADIN';}
+    70%{content: 'LOADING';}
+    80%{content: 'LOADING.';}
+    90%{content: 'LOADING..';}
+    100%{content: 'LOADING...';}
+}
+
 /******Loaders*******/
 
 .spinner {
@@ -64,14 +78,20 @@
 }
 
 .heart-beat {
+    display: inline-block;
+    width: 0;
     animation: heartbeat 1s linear;
     animation-iteration-count: infinite;
     border-left: 4em solid transparent;
     border-right: 4em solid transparent;
     border-top: 4em solid currentColor;
-    width: 0;
-    height: 0;
     position: relative;
-    top: 5em;
-    left: 2em;
+    top: 4em;
+}
+
+.text-loader::before{
+    content: '';
+    font-family: sans-serif;
+    animation: textloader 1s linear;
+    animation-iteration-count: infinite;
 }
