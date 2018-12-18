@@ -116,6 +116,7 @@
     font-family: sans-serif;
     animation: textloader 1s linear;
     animation-iteration-count: infinite;
+    border-right: 1px solid black;
 }
 
 .text-loader {
