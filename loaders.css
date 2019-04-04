@@ -247,8 +247,9 @@
 }
 
 .blinking-eyes::after {
-    top: -1em;
-    left: -0.25em;
+    width: 3em;
+    left: 0.75em;
     border-color: transparent;
     border-bottom-color: currentColor;
+    top: -1em;
 }
