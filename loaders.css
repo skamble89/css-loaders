@@ -30,6 +30,25 @@
     }
 }
 
+@keyframes blink {
+    0% {
+        height: 2em;
+        top: 1em;
+    }
+    10% {
+        height: 0.5em;
+        top: 1.75em;
+    }
+    20% {
+        height: 2em;
+        top: 1em;
+    }
+    100% {
+        height: 2em;
+        top: 1em;
+    }
+}
+
 @keyframes textloader {
     0% {
         content: '';
@@ -72,6 +91,15 @@
     }
     to {
         transform: translate(0, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate_y {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
     }
 }
 
@@ -140,12 +168,12 @@
     position: relative;
 }
 
-.clock::before{
+.clock::before {
     animation: clock 1s linear;
     width: 2.5em;
 }
 
-.clock::after{
+.clock::after {
     animation: clock 5s linear;
     width: 2em;
 }
@@ -161,4 +189,66 @@
     left: 50%;
     animation-iteration-count: infinite;
     transform-origin: left;
+}
+
+.three-d-plus {
+    position: relative;
+    background-color: red;
+    animation: rotate_y 1s linear;
+    animation-iteration-count: infinite;
+}
+
+.three-d-plus::before {
+    position: absolute;
+    content: '';
+    background-color: green;
+    transform: rotateX(60deg);
+}
+
+.three-d-plus::after {
+    position: absolute;
+    content: '';
+    background-color: blue;
+    transform: rotateZ(90deg);
+}
+
+.three-d-plus,
+.three-d-plus::before,
+.three-d-plus::after {
+    height: 5em;
+    width: 5em;
+    opacity: 0.7;
+    display: block;
+}
+
+.blinking-eyes,
+.blinking-eyes::after {
+    position: relative;
+    border: 0.2em solid currentColor;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+}
+
+.blinking-eyes::before,
+.blinking-eyes::after {
+    content: '';
+    position: absolute;
+}
+
+.blinking-eyes::before {
+    left: 1em;
+    height: 3em;
+    width: 1em;
+    animation: blink 1s linear;
+    animation-iteration-count: infinite;
+    box-shadow: 2em 0 currentColor;
+    background-color: currentColor;
+}
+
+.blinking-eyes::after {
+    top: -1em;
+    left: -0.25em;
+    border-color: transparent;
+    border-bottom-color: currentColor;
 }
