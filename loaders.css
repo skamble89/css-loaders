@@ -311,10 +311,7 @@
     background-color: currentColor;
     border-radius: 50%;
     border: 1em solid #ccc;
-    border-top-color: red;
-    border-right-color: green;
-    border-bottom-color: blue;
-    border-left-color: yellow;
+    border-color: red green blue yellow;
     position: absolute;
     z-index: 1;
     animation: bouncing-ball 0.4s ease-in-out;
