@@ -299,6 +299,10 @@
     top: -1em;
 }
 
+.bouncing-ball {
+    position: relative;
+}
+
 .bouncing-ball::before {
     content: '';
     display: block;
@@ -323,6 +327,7 @@
     display: block;
     width: 2em;
     height: 2em;
+    top: 1.5em;
     border-radius: 50%;
     position: absolute;
     animation: bouncing-ball-shadow 0.5s ease-in-out;
