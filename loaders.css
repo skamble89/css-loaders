@@ -138,13 +138,13 @@
 
 @keyframes bouncing-ball-shadow {
     0% {
-        box-shadow: 0 13em 0 0 #000;
-        transform: scale(1.5, 0.25);
+        box-shadow: 0 13em 0.3em 0 #000;
+        transform: scale(1.25, 0.25);
     }
 
     100% {
-        box-shadow: 0 13em 1em 0 #000;
-        transform: scale(1, 0.25);
+        box-shadow: 0 13em 0.75em 0 #000;
+        transform: scale(1.25, 0.25);
     }
 }
 
@@ -317,7 +317,7 @@
     border-left-color: yellow;
     position: absolute;
     z-index: 1;
-    animation: bouncing-ball 0.5s ease-in-out;
+    animation: bouncing-ball 0.4s ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -330,7 +330,7 @@
     top: 1.5em;
     border-radius: 50%;
     position: absolute;
-    animation: bouncing-ball-shadow 0.5s ease-in-out;
+    animation: bouncing-ball-shadow 0.4s ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
