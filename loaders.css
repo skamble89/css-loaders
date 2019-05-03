@@ -314,7 +314,7 @@
     border-color: red green blue yellow;
     position: absolute;
     z-index: 1;
-    animation: bouncing-ball 0.4s ease-in-out;
+    animation: bouncing-ball 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -327,7 +327,7 @@
     top: 1.5em;
     border-radius: 50%;
     position: absolute;
-    animation: bouncing-ball-shadow 0.4s ease-in-out;
+    animation: bouncing-ball-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
