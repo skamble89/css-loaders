@@ -332,3 +332,12 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+.radar {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, currentColor, transparent);
+    animation: rotate-z 1s linear;
+    animation-iteration-count: infinite;
+}
