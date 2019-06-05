@@ -309,9 +309,8 @@
     display: block;
     width: 0;
     height: 0;
-    background-color: currentColor;
     border-radius: 50%;
-    border: 1em solid #ccc;
+    border: 1em solid;
     border-color: red green blue yellow;
     position: absolute;
     z-index: 1;
