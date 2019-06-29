@@ -148,6 +148,26 @@
     }
 }
 
+@keyframes move-x {
+    0% {
+        transform: translateX(-2.5em);
+    }
+
+    100% {
+        transform: translateX(2.5em);
+    }
+}
+
+@keyframes move-y {
+    0% {
+        transform: translateY(-2.5em);
+    }
+
+    100% {
+        transform: translateY(2.5em);
+    }
+}
+
 /******Loaders*******/
 
 .spinner::before {
@@ -339,4 +359,24 @@
     background: conic-gradient(from 0deg, currentColor, transparent);
     animation: rotate-z 1s linear;
     animation-iteration-count: infinite;
+}
+
+.rotating-dot {
+    width: 5em;
+    height: 5em;
+    position: relative;
+    animation: rotate-z 1s linear;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    border: 1em solid rgba(0, 0, 0, 0.1);
+}
+
+.rotating-dot::after {
+    content: ' ';
+    position: absolute;
+    left: -0.3em;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background-color: currentColor;
 }
