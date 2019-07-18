@@ -479,9 +479,14 @@
     background-color: currentColor;
 }
 
-.disintegrating-square {
+.disintegrating-square::before {
+    content: '';
+    display: block;
     height: 1em;
     width: 1em;
     animation: disintegrating-square 1s linear;
     animation-iteration-count: infinite;
+    position: relative;
+    top: -2.1em;
+    left: -2.1em;
 }
