@@ -266,6 +266,18 @@
     }
 }
 
+@keyframes pulsate {
+
+    0%,
+    100% {
+        background-color: #ddd;
+    }
+
+    50% {
+        background-color: #999;
+    }
+}
+
 /******Loaders*******/
 
 .spinner::before {
@@ -489,4 +501,11 @@
     position: relative;
     top: -2.1em;
     left: -2.1em;
+}
+
+.placeholder {
+    position: relative;
+    overflow: hidden;
+    animation: pulsate 2s linear;
+    animation-iteration-count: infinite;
 }
